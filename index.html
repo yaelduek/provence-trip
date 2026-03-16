@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provence &amp; The Riviera – April 2026</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    /* ─── Variables ─────────────────────────────────────────────── */
+    :root {
+      --lavender:       #7C3AED;
+      --lavender-mid:   #8B5CF6;
+      --lavender-light: #A78BFA;
+      --lavender-pale:  #EDE9FE;
+      --gold:           #D97706;
+      --gold-light:     #FCD34D;
+      --gold-pale:      #FEF3C7;
+      --terracotta:     #C2410C;
+      --terracotta-lt:  #F97316;
+      --sage:           #16A34A;
+      --teal:           #0891B2;
+      --cream:          #FEFCE8;
+      --cream-soft:     #FFFBEB;
+      --charcoal:       #1C1917;
+      --text:           #292524;
+      --text-light:     #78716C;
+      --border:         #E7E5E4;
+      --white:          #FFFFFF;
+      --shadow:         0 4px 20px rgba(0,0,0,0.07);
+      --shadow-lg:      0 10px 40px rgba(0,0,0,0.12);
+      --radius:         16px;
+    }
+
+    /* ─── Reset ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream-soft);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+
+    /* ─── Nav ────────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2.5rem;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--lavender);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--lavender); }
+
+    /* ─── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(160deg,
+          rgba(55, 7, 100, 0.88) 0%,
+          rgba(109, 40, 217, 0.75) 28%,
+          rgba(194, 65, 12, 0.65) 62%,
+          rgba(217, 119, 6, 0.85) 100%),
+        url('https://images.unsplash.com/photo-1598511757337-fe2cafc31ba0?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 85%, rgba(124,58,237,0.35) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 15%, rgba(217,119,6,0.3) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    /* decorative circles */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140%;
+      height: 160px;
+      background: var(--cream-soft);
+      border-radius: 50% 50% 0 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(217,119,6,0.85);
+      backdrop-filter: blur(6px);
+      color: white;
+      padding: 0.4rem 1.4rem;
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 5.5rem;
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 0.4rem;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.25);
+    }
+    .hero h1 em {
+      display: block;
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 3.2rem;
+    }
+    .hero-route {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+    .btn-primary { background: white; color: var(--lavender); }
+    .btn-outline { background: rgba(255,255,255,0.15); color: white; border: 1.5px solid rgba(255,255,255,0.5); backdrop-filter: blur(8px); }
+
+    /* ─── Container ──────────────────────────────────────────────── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 2rem;
+    }
+
+    /* ─── Section Title ──────────────────────────────────────────── */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+    .section-subtitle {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+    .title-rule {
+      display: block;
+      width: 56px;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--lavender), var(--gold));
+      margin-bottom: 2.75rem;
+    }
+
+    /* ─── Logistics ──────────────────────────────────────────────── */
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lcard {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--lavender);
+    }
+    .lcard.depart  { border-top-color: var(--terracotta); }
+    .lcard.car     { border-top-color: var(--gold); grid-column: 1 / -1; }
+    .lcard h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .lcard h3 i { font-size: 0.95rem; color: var(--lavender); }
+    .lcard.depart h3 i { color: var(--terracotta); }
+    .lcard.car h3 i { color: var(--gold); }
+    .lcard-body { display: flex; flex-direction: column; gap: 0.45rem; }
+    .lcard-body p { font-size: 0.875rem; }
+    .lcard-body strong { color: var(--charcoal); font-weight: 600; }
+    .car-row {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .car-col { display: flex; flex-direction: column; gap: 0.45rem; }
+    .car-col p { font-size: 0.875rem; }
+    .car-col strong { color: var(--charcoal); font-weight: 600; }
+
+    .note-box {
+      background: var(--gold-pale);
+      border: 1px solid #FCD34D;
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: #92400E;
+    }
+    .note-box i { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+
+    /* ─── Overview Table ─────────────────────────────────────────── */
+    .table-wrap {
+      background: white;
+      border-radius: 20px;
+      padding: 0;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    .table-wrap thead { background: linear-gradient(135deg, var(--lavender) 0%, #6D28D9 100%); color: white; }
+    .table-wrap thead th {
+      padding: 1.1rem 1.3rem;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+    .table-wrap tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    .table-wrap tbody tr:last-child { border-bottom: none; }
+    .table-wrap tbody tr:hover { background: var(--lavender-pale); }
+    .table-wrap tbody td { padding: 1rem 1.3rem; vertical-align: middle; }
+    .table-wrap tbody td:first-child { font-weight: 700; color: var(--lavender); white-space: nowrap; font-size: 0.82rem; }
+    .table-wrap td.loc-cell { font-weight: 600; color: var(--charcoal); }
+    .hotel-link { color: var(--lavender); text-decoration: none; font-weight: 600; }
+    .hotel-link:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      padding: 0.18rem 0.65rem;
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .badge-free  { background: #DCFCE7; color: #166534; }
+    .badge-paid  { background: #FEE2E2; color: #991B1B; }
+    .badge-mixed { background: #DBEAFE; color: #1E40AF; }
+    .parking-note { font-size: 0.78rem; color: var(--text-light); display: block; margin-top: 0.2rem; }
+
+    /* ─── Restaurants ────────────────────────────────────────────── */
+    .restaurants-bg {
+      background: linear-gradient(180deg, #F5F3FF 0%, #FFF9F0 100%);
+      padding: 80px 2rem;
+    }
+    .restaurants-inner { max-width: 1200px; margin: 0 auto; }
+    .r-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .rcard {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .rcard::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--rcolor, var(--lavender));
+    }
+    .rcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .rcard-date  { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.15rem; }
+    .rcard-loc   { font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.3rem; }
+    .rcard-name  { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .rcard-name a { text-decoration: none; color: var(--charcoal); transition: color 0.2s; }
+    .rcard-name a:hover { color: var(--lavender); }
+    .rcard-desc  { font-size: 0.82rem; color: var(--text-light); line-height: 1.55; }
+    .rcard-footer { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+    .rbadge { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 50px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; }
+    .rbadge-booked  { background: #DCFCE7; color: #166534; }
+    .rbadge-need    { background: #FEE2E2; color: #991B1B; }
+    .rbadge-walk-in { background: #DBEAFE; color: #1E40AF; }
+    .rbadge-lunch   { background: #FEF9C3; color: #854D0E; }
+    .rcard-phone { font-size: 0.75rem; color: var(--text-light); }
+    .rcard-phone i { margin-right: 0.25rem; }
+
+    /* ─── Day Sections ───────────────────────────────────────────── */
+    .days-container { max-width: 1200px; margin: 0 auto; padding: 60px 2rem 80px; }
+    .days-title-block { margin-bottom: 3rem; }
+    .day-section { margin-bottom: 3.5rem; }
+
+    .day-header {
+      border-radius: 20px;
+      padding: 2.5rem 2.5rem 2.75rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .day-header::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      pointer-events: none;
+    }
+    .day-header::before {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -20px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      pointer-events: none;
+    }
+    .day-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 0.3rem; }
+    .day-header h2 { font-family: 'Playfair Display', serif; font-size: 2.1rem; font-weight: 700; line-height: 1.15; margin-bottom: 0.3rem; }
+    .day-header-date { font-size: 0.88rem; opacity: 0.82; font-weight: 300; letter-spacing: 0.05em; }
+
+    .d-nice       { background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 45%, #0EA5E9 100%); }
+    .d-hcountry   { background: linear-gradient(135deg, #4C1D95 0%, #7C3AED 50%, #A855F7 100%); }
+    .d-provence   { background: linear-gradient(135deg, #92400E 0%, #B45309 45%, #F59E0B 100%); }
+    .d-montpellier{ background: linear-gradient(135deg, #831843 0%, #BE185D 50%, #EC4899 100%); }
+    .d-arles      { background: linear-gradient(135deg, #7C2D12 0%, #C2410C 50%, #F97316 100%); }
+    .d-aix        { background: linear-gradient(135deg, #14532D 0%, #15803D 50%, #4ADE80 100%); }
+    .d-cassis     { background: linear-gradient(135deg, #164E63 0%, #0E7490 50%, #22D3EE 100%); }
+    .d-departure  { background: linear-gradient(135deg, #292524 0%, #57534E 100%); }
+
+    .activities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
+    .acard {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .acard:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .acard-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.7rem; }
+    .acard-name a { text-decoration: none; color: var(--charcoal); transition: color 0.2s; }
+    .acard-name a:hover { color: var(--lavender); }
+    .acard-desc { font-size: 0.865rem; color: var(--text); line-height: 1.65; margin-bottom: 0.9rem; }
+    .acard-meta { display: flex; flex-direction: column; gap: 0.45rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .acard-meta-row { display: flex; gap: 0.55rem; align-items: flex-start; font-size: 0.8rem; color: var(--text-light); }
+    .acard-meta-row i { flex-shrink: 0; margin-top: 2px; width: 14px; color: var(--lavender-mid); }
+    .acard-nolink { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.7rem; color: var(--charcoal); }
+
+    /* Departure box */
+    .departure-box {
+      background: linear-gradient(135deg, #292524 0%, #57534E 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .dep-item h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--gold-light); }
+    .dep-item p { font-size: 0.875rem; opacity: 0.85; }
+    .dep-alert {
+      background: rgba(217,119,6,0.2);
+      border: 1px solid rgba(217,119,6,0.5);
+      border-radius: 12px;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.75rem;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.6);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    footer h3 { font-family: 'Playfair Display', serif; color: white; font-size: 1.6rem; margin-bottom: 0.4rem; }
+    footer p { font-size: 0.82rem; }
+    footer .footer-route { color: rgba(255,255,255,0.4); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.5rem; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .r-grid { grid-template-columns: 1fr 1fr; }
+      .day-header h2 { font-size: 1.7rem; }
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 3.2rem; }
+      .hero h1 em { font-size: 2rem; }
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .logistics-grid { grid-template-columns: 1fr; }
+      .lcard.car { grid-column: auto; }
+      .r-grid { grid-template-columns: 1fr; }
+      .departure-box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 60px 1.25rem; }
+      .hero { padding: 1.5rem 1.25rem; }
+      .days-container { padding: 40px 1.25rem 60px; }
+      .day-header { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAV ══════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-logo">✦&nbsp; Provence 2026</a>
+  <ul class="nav-links">
+    <li><a href="#logistics">Flights &amp; Car</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#restaurants">Restaurants</a></li>
+    <li><a href="#highlights">Daily Plan</a></li>
+    <li><a href="https://maps.app.goo.gl/CKPtgWmorKTqkYvLA" target="_blank" rel="noopener">Route Map&nbsp;<i class="fas fa-external-link-alt" style="font-size:0.65rem;"></i></a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═════════════════════════════ -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✦ &nbsp;April 23 – May 1 &nbsp;·&nbsp; 2026</div>
+    <h1>Provence
+      <em>&amp; The Riviera</em>
+    </h1>
+    <p class="hero-route">Nice &nbsp;·&nbsp; Moustiers &nbsp;·&nbsp; St. Rémy &nbsp;·&nbsp; Montpellier &nbsp;·&nbsp; Arles &nbsp;·&nbsp; Aix &nbsp;·&nbsp; Cassis</p>
+    <div class="hero-actions">
+      <a href="https://maps.app.goo.gl/CKPtgWmorKTqkYvLA" target="_blank" rel="noopener" class="btn-hero btn-primary">
+        <i class="fas fa-map-marked-alt"></i>&nbsp; Full Route Map
+      </a>
+      <a href="#highlights" class="btn-hero btn-outline">
+        <i class="fas fa-calendar-days"></i>&nbsp; Day-by-Day Plan
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════ LOGISTICS ═════════════════════════ -->
+<section id="logistics" class="container">
+  <h2 class="section-title">Logistics &amp; Flights</h2>
+  <p class="section-subtitle">El Al round-trip with an automatic SUV for the full journey</p>
+  <span class="title-rule"></span>
+
+  <div class="logistics-grid">
+    <!-- Arrival -->
+    <div class="lcard">
+      <h3><i class="fas fa-plane-arrival"></i> Arrival – April 23</h3>
+      <div class="lcard-body">
+        <p><strong>Flight:</strong> El Al LY 341</p>
+        <p><strong>Route:</strong> Tel Aviv → Nice (NCE)</p>
+        <p><strong>Arrives:</strong> 10:30 AM</p>
+        <p><strong>Car:</strong> Pick up SUV at Nice Airport</p>
+      </div>
+    </div>
+
+    <!-- Departure -->
+    <div class="lcard depart">
+      <h3><i class="fas fa-plane-departure"></i> Departure – May 1</h3>
+      <div class="lcard-body">
+        <p><strong>Flight:</strong> El Al LY 324</p>
+        <p><strong>Route:</strong> Marseille (MRS) → Tel Aviv</p>
+        <p><strong>Departs:</strong> 10:00 AM</p>
+        <p><strong>Car:</strong> Drop off at Marseille Airport</p>
+      </div>
+    </div>
+
+    <!-- Car -->
+    <div class="lcard car">
+      <h3><i class="fas fa-car"></i> Car Rental – Avis</h3>
+      <div class="car-row">
+        <div class="car-col">
+          <p><strong>Provider:</strong> Avis</p>
+          <p><strong>Confirmation:</strong> 09249075IL3</p>
+        </div>
+        <div class="car-col">
+          <p><strong>Vehicle:</strong> Automatic SUV</p>
+          <p><strong>Pick-up:</strong> Nice Airport (NCE) &nbsp;→&nbsp; Drop-off: Marseille Airport (MRS)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <i class="fas fa-triangle-exclamation fa-fw"></i>
+    <span><strong>Departure reminder:</strong> Leave Cassis by <strong>07:00 AM</strong> on May 1 to reach Marseille Airport (MRS) by 07:45 AM for check-in. Flight departs at 10:00 AM (55 km / ~45 min drive).</span>
+  </div>
+</section>
+
+<!-- ════════════════════════ TRIP OVERVIEW ═══════════════════════ -->
+<section id="overview" class="container" style="padding-top:0;">
+  <h2 class="section-title">Trip Overview</h2>
+  <p class="section-subtitle">9 nights across the South of France</p>
+  <span class="title-rule"></span>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Hotel</th>
+          <th>Parking</th>
+          <th>Drive</th>
+          <th>Distance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apr 23 &nbsp;Thu</td>
+          <td class="loc-cell">Nice</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/la-maison-du-sa-c-minaire.html" target="_blank" rel="noopener">Le Saint Paul</a></td>
+          <td><span class="badge badge-free">Free</span><span class="parking-note">Private Parking</span></td>
+          <td>15 min</td>
+          <td>7 km</td>
+        </tr>
+        <tr>
+          <td>Apr 24 &nbsp;Fri</td>
+          <td class="loc-cell">Nice</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/la-maison-du-sa-c-minaire.html" target="_blank" rel="noopener">Le Saint Paul</a></td>
+          <td><span class="badge badge-free">Free</span><span class="parking-note">Private Parking</span></td>
+          <td>1 hr (RT)</td>
+          <td>40 km</td>
+        </tr>
+        <tr>
+          <td>Apr 25 &nbsp;Sat</td>
+          <td class="loc-cell">Moustiers</td>
+          <td><a class="hotel-link" href="https://www.hotel-lafermerose.com/en/" target="_blank" rel="noopener">Hôtel de la Ferme Rose</a></td>
+          <td><span class="badge badge-free">Free</span><span class="parking-note">Private Parking</span></td>
+          <td>2h 20m</td>
+          <td>150 km</td>
+        </tr>
+        <tr>
+          <td>Apr 26 &nbsp;Sun</td>
+          <td class="loc-cell">St. Rémy</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/hostellerie-le-chalet-fleuri.en-us.html" target="_blank" rel="noopener">Hôtel le Chalet Fleuri</a></td>
+          <td><span class="badge badge-free">Free</span><span class="parking-note">Private Parking</span></td>
+          <td>1h 55m</td>
+          <td>117 km</td>
+        </tr>
+        <tr>
+          <td>Apr 27 &nbsp;Mon</td>
+          <td class="loc-cell">Montpellier</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/hotel-daragon.html" target="_blank" rel="noopener">Hotel d'Aragon</a></td>
+          <td><span class="badge badge-paid">Paid</span><span class="parking-note">Off-site; €15–20/day</span></td>
+          <td>1h 20m</td>
+          <td>107 km</td>
+        </tr>
+        <tr>
+          <td>Apr 28 &nbsp;Tue</td>
+          <td class="loc-cell">Arles</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/delamuette.en-us.html" target="_blank" rel="noopener">Hôtel La Muette</a></td>
+          <td><span class="badge badge-paid">Paid</span><span class="parking-note">Off-site; reservation required</span></td>
+          <td>1h</td>
+          <td>81 km</td>
+        </tr>
+        <tr>
+          <td>Apr 29 &nbsp;Wed</td>
+          <td class="loc-cell">Aix-en-Provence</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/ha-tel-saint-christophe.html" target="_blank" rel="noopener">Hôtel Saint Christophe</a></td>
+          <td><span class="badge badge-paid">Paid</span><span class="parking-note">Private/Public; ~€25/day</span></td>
+          <td>55 min</td>
+          <td>76 km</td>
+        </tr>
+        <tr>
+          <td>Apr 30 &nbsp;Thu</td>
+          <td class="loc-cell">Cassis</td>
+          <td><a class="hotel-link" href="https://www.booking.com/hotel/fr/la-rade-cassis.html" target="_blank" rel="noopener">Best Western La Rade</a></td>
+          <td><span class="badge badge-mixed">Free/Paid</span><span class="parking-note">Outdoor free · Garage paid</span></td>
+          <td>55 min</td>
+          <td>50 km</td>
+        </tr>
+        <tr>
+          <td>May 1 &nbsp;Fri</td>
+          <td class="loc-cell">Departure</td>
+          <td>—</td>
+          <td>—</td>
+          <td>45 min</td>
+          <td>55 km</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════ RESTAURANTS ═══════════════════════ -->
+<div class="restaurants-bg" id="restaurants">
+  <div class="restaurants-inner">
+    <h2 class="section-title">Nightly Restaurant Guide</h2>
+    <p class="section-subtitle">From Alain Ducasse's farm to riverfront Italian — a feast across Provence</p>
+    <span class="title-rule"></span>
+
+    <div class="r-grid">
+
+      <!-- Apr 23 Pappagallo -->
+      <div class="rcard" style="--rcolor: #D97706;">
+        <div class="rcard-date">Apr 23 · Thursday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Nice</div>
+        <div class="rcard-name"><a href="https://www.pappagallo.co/" target="_blank" rel="noopener">Pappagallo</a></div>
+        <div class="rcard-desc"><strong>🎂 Birthday Dinner.</strong> High-end Italian; focus on steaks &amp; pasta.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-need">Book end of March</span>
+        </div>
+      </div>
+
+      <!-- Apr 24 Villa d'Este -->
+      <div class="rcard" style="--rcolor: #2563EB;">
+        <div class="rcard-date">Apr 24 · Friday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Nice</div>
+        <div class="rcard-name"><a href="https://www.instagram.com/villadestenice/" target="_blank" rel="noopener">Villa d'Este</a></div>
+        <div class="rcard-desc">Italian. Elegant terrace; selection of meat &amp; pasta.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-walk-in">No Reservation Needed</span>
+        </div>
+      </div>
+
+      <!-- Apr 25 La Bastide -->
+      <div class="rcard" style="--rcolor: #7C3AED;">
+        <div class="rcard-date">Apr 25 · Saturday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Moustiers</div>
+        <div class="rcard-name"><a href="https://www.bastide-moustiers.com/en/" target="_blank" rel="noopener">La Bastide de Moustiers</a></div>
+        <div class="rcard-desc">Agro-Luxury. Alain Ducasse's farm; spit-roasted meats.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-booked">Booked</span>
+          <span class="rcard-phone" style="font-size:0.72rem; color:#991B1B;">No-show penalty: €190</span>
+        </div>
+      </div>
+
+      <!-- Apr 26 L'Aile ou la Cuisse -->
+      <div class="rcard" style="--rcolor: #B45309;">
+        <div class="rcard-date">Apr 26 · Sunday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> St. Rémy</div>
+        <div class="rcard-name"><a href="https://www.laile-ou-lacuisse.fr/la-carte/" target="_blank" rel="noopener">L'Aile ou la Cuisse</a></div>
+        <div class="rcard-desc">Meat-Forward. Renowned for rotisserie and gourmet meats.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-booked">Booked</span>
+        </div>
+      </div>
+
+      <!-- Apr 27 Casa Di Giorgio -->
+      <div class="rcard" style="--rcolor: #BE185D;">
+        <div class="rcard-date">Apr 27 · Monday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Montpellier</div>
+        <div class="rcard-name"><a href="https://www.google.com/search?q=https://groupe-tandem.fr/casa-di-giorgio-restaurantitalien-montpellier/" target="_blank" rel="noopener">Casa Di Giorgio</a></div>
+        <div class="rcard-desc">Italian. Refined veal dishes and fresh pasta.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-booked">Booked</span>
+        </div>
+      </div>
+
+      <!-- Apr 28 Lunch Colosseo -->
+      <div class="rcard" style="--rcolor: #EA580C;">
+        <div class="rcard-date">Apr 28 · Tuesday – Lunch</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Arles</div>
+        <div class="rcard-name"><a href="https://www.google.com/search?q=https://www.tripadvisor.com/Restaurant_Review-g187210-d1321746-Reviews-Colosseo-Arles_Bouches_du_Rhone_Provence_Alpes_Cote_d_Azur.html" target="_blank" rel="noopener">Colosseo</a></div>
+        <div class="rcard-desc">Italian. Authentic pizza and pasta near the arena.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-lunch">Lunch</span>
+        </div>
+      </div>
+
+      <!-- Apr 28 Apsara -->
+      <div class="rcard" style="--rcolor: #C2410C;">
+        <div class="rcard-date">Apr 28 · Tuesday – Dinner</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Arles</div>
+        <div class="rcard-name"><a href="https://www.google.com/search?q=https://www.apsara-arles.com/" target="_blank" rel="noopener">Apsara</a></div>
+        <div class="rcard-desc">Thai/Cambodian. Highly rated authentic Asian variety.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-need">Need to Book</span>
+        </div>
+      </div>
+
+      <!-- Apr 29 Gnocchi Della Nonna -->
+      <div class="rcard" style="--rcolor: #16A34A;">
+        <div class="rcard-date">Apr 29 · Wednesday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Aix-en-Provence</div>
+        <div class="rcard-name"><a href="https://gnocchidellanonna.fr/carte-restaurant/" target="_blank" rel="noopener">Gnocchi Della Nonna</a></div>
+        <div class="rcard-desc">Italian. Specialized pasta with a gnocchi focus.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-need">Book by Phone</span>
+          <span class="rcard-phone"><i class="fas fa-phone"></i>+33 4 88 29 48 20</span>
+        </div>
+      </div>
+
+      <!-- Apr 30 La Defonce -->
+      <div class="rcard" style="--rcolor: #0E7490;">
+        <div class="rcard-date">Apr 30 · Thursday</div>
+        <div class="rcard-loc"><i class="fas fa-location-dot"></i> Cassis</div>
+        <div class="rcard-name"><a href="https://www.la-defonce.fr/" target="_blank" rel="noopener">La Defonce</a></div>
+        <div class="rcard-desc">French / Asian Fusion.</div>
+        <div class="rcard-footer">
+          <span class="rbadge rbadge-need">Book by Phone</span>
+          <span class="rcard-phone"><i class="fas fa-phone"></i>+33 4 13 12 63 97</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════ DAILY HIGHLIGHTS ══════════════════════ -->
+<div id="highlights">
+  <div class="days-container">
+    <div class="days-title-block">
+      <h2 class="section-title">Daily Highlights</h2>
+      <p class="section-subtitle">What to see, where to go, and how to get there</p>
+      <span class="title-rule"></span>
+    </div>
+
+    <!-- ─── Apr 23–24: Nice ──────────────────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-nice">
+        <div class="day-eyebrow">Day 1 &amp; 2</div>
+        <h2>Nice &amp; The Riviera</h2>
+        <div class="day-header-date">April 23–24 · Thursday–Friday</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://frenchriviera.travel/promenade-des-anglais/" target="_blank" rel="noopener">Promenade des Anglais</a></div>
+          <div class="acard-desc">An iconic 7 km seaside walk featuring the Belle Époque Hotel Negresco and the Masséna Museum.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Easily accessed from the city center; follow the palm-lined walkway from Castle Hill toward the airport.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Musée Masséna: 10:00 AM – 6:00 PM · Closed Tuesdays</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.eze-tourisme.com/en/" target="_blank" rel="noopener">Èze Village &amp; Jardin Exotique</a></div>
+          <div class="acard-desc">A medieval hilltop village famous for narrow pedestrian streets and artisans. The Jardin Exotique at the summit offers panoramic Mediterranean views.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Park at the Général de Gaulle underground lot. Option: hike the Nietzsche Trail from Èze-sur-Mer (~1 hour).</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Garden: daily in April, 9:00 AM – 6:30 PM</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.explorenicecotedazur.com/en/info/sentier-du-littoral-de-nice-en/" target="_blank" rel="noopener">Sentier du Littoral (Nice to Villefranche)</a></div>
+          <div class="acard-desc">A scenic 6 km coastal trail with breathtaking views over the Bay of Villefranche-sur-Mer.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Begin at Jardin Félix Rainaud near "la Réserve" restaurant; follow the stone path along the coast.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── Apr 25: The High Country ────────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-hcountry">
+        <div class="day-eyebrow">Day 3</div>
+        <h2>The High Country</h2>
+        <div class="day-header-date">April 25 · Saturday &nbsp;·&nbsp; Nice → Moustiers (150 km)</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.leshuttle.com/uk-en/discover/driving-inspiration/france/driving-the-route-napoleon" target="_blank" rel="noopener">Route Napoléon</a></div>
+          <div class="acard-desc">One of France's most scenic drives, winding through the Verdon Pre-Alps with spectacular views of cliffs and pine forests.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-route fa-fw"></i><span>Follow the D4085 from Grasse toward Castellane for the most dramatic stretches.</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.moustiers.fr/en" target="_blank" rel="noopener">Moustiers-Sainte-Marie</a></div>
+          <div class="acard-desc">Perched against limestone cliffs, this village is renowned for its 17th-century faïence ceramics and the golden star suspended above the ravine.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Use the designated parking lots on the village outskirts — the center is largely pedestrian.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── Apr 26: Heart of Provence ───────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-provence">
+        <div class="day-eyebrow">Day 4</div>
+        <h2>Heart of Provence &amp; Nature</h2>
+        <div class="day-header-date">April 26 · Sunday &nbsp;·&nbsp; Moustiers → St. Rémy (117 km)</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://uk.destinationluberon.com/page/gordes---en+50744.html" target="_blank" rel="noopener">Luberon Villages – Gordes &amp; Roussillon</a></div>
+          <div class="acard-desc">Gordes offers a dramatic hilltop silhouette with stone architecture; Roussillon is famous for its vibrant ochre-colored houses.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>In Gordes, use the Bel-Air lot for a photo op before parking at the car-free center edge.</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.peek.com/gordes-provence-alpes-cte-dazur-france/r0d6gxx/luberon-highlights-scenic-small-group-tour/a0d9z5x8" target="_blank" rel="noopener">Sentier des Ocres (Ochre Trail)</a></div>
+          <div class="acard-desc">A flat, 45-minute trail through natural ochre quarries with striking red and orange cliffs.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Village of Roussillon; entry fee ~€4.</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.saintpauldemausole.fr/" target="_blank" rel="noopener">Saint-Paul de Mausole (St. Rémy)</a></div>
+          <div class="acard-desc">A relaxed town with artsy streets and the former monastery where Van Gogh resided and painted <em>The Starry Night</em>.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>1 km south of town center on Avenue Vincent van Gogh.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Daily 9:30 AM – 7:00 PM · Last entry 6:30 PM</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── Apr 27: Cultural Corridor ───────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-montpellier">
+        <div class="day-eyebrow">Day 5</div>
+        <h2>Cultural Corridor</h2>
+        <div class="day-header-date">April 27 · Monday &nbsp;·&nbsp; St. Rémy → Montpellier (107 km) via Avignon</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://palais-des-papes.com/en/" target="_blank" rel="noopener">Palais des Papes – Avignon</a></div>
+          <div class="acard-desc">A UNESCO World Heritage site and the world's largest Gothic palace, featuring interactive HistoPad tablet tours.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Park at Parking Palais des Papes (Rue Ferruce) directly beneath the monument.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Daily 9:00 AM – 7:00 PM</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://facmedecine.umontpellier.fr/en/jardin-des-plantes/" target="_blank" rel="noopener">Jardin des Plantes – Montpellier</a></div>
+          <div class="acard-desc">Founded in 1593, France's oldest botanical garden with historic greenhouses and medicinal plant collections.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Main entrance on Boulevard Henri IV; 10 min walk from center.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>12:00 PM – 6:00 PM · <strong>Note: Closed Mondays</strong> — if so, explore the historic center instead.</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.google.com/search?q=https://www.montpellier-france.com/stay/unmissable/the-place-de-la-comedie/" target="_blank" rel="noopener">Place de la Comédie &amp; Shopping</a></div>
+          <div class="acard-desc">The massive pedestrian heart of Montpellier, adjacent to the Polygone Mall — Uniqlo and more.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Follow tram lines 1 or 2 to the "Comédie" stop.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── Apr 28: Arles ────────────────────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-arles">
+        <div class="day-eyebrow">Day 6</div>
+        <h2>Arles &amp; Roman Antiquity</h2>
+        <div class="day-header-date">April 28 · Tuesday &nbsp;·&nbsp; Montpellier → Arles (81 km)</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.arenes-arles.com/" target="_blank" rel="noopener">Roman Amphitheatre – Les Arènes</a></div>
+          <div class="acard-desc">A beautifully preserved 1st-century colosseum still used for local festivals.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Central Arles; several paid lots within a 5-minute walk.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Daily 9:00 AM – 6:00 PM</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.fondation-vincentvangogh-arles.org/en/" target="_blank" rel="noopener">Fondation Vincent van Gogh Arles</a></div>
+          <div class="acard-desc">A contemporary art space exploring Van Gogh's legacy through rotating exhibitions alongside modern artists.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>35 ter, rue du Docteur-Fanton, near the Rhône river.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Tue–Sun 10:00 AM – 6:00 PM · Last entry 5:30 PM</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.luma.org/en/arles.html" target="_blank" rel="noopener">LUMA Arles</a></div>
+          <div class="acard-desc">A contemporary arts complex featuring the striking Frank Gehry Tower. Note: Tower and exhibitions are closed on Tuesdays, but the Landscaped Park is open.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Chemin des Minimes</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Park open daily 7:00 AM – 6:30 PM · Tower closed Tuesdays</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── Apr 29: Aix-en-Provence ─────────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-aix">
+        <div class="day-eyebrow">Day 7</div>
+        <h2>Aix-en-Provence</h2>
+        <div class="day-header-date">April 29 · Wednesday &nbsp;·&nbsp; Arles → Aix (76 km)</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.museegranet-aixenprovence.fr/en/" target="_blank" rel="noopener">Musée Granet</a></div>
+          <div class="acard-desc">One of France's finest regional museums, housing a significant collection of works by Paul Cézanne. The Atelier de Cézanne is under renovation until June 2026 — this is the best alternative.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Place Saint-Jean de Malte, a short walk from Cours Mirabeau.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>Tue–Sun 12:00 PM – 6:00 PM</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-nolink">Cours Mirabeau</div>
+          <div class="acard-desc">A majestic main boulevard lined with giant plane trees and historic fountains. Perfect for a morning coffee or a <em>Calisson</em> (local almond candy) tasting.</div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-nolink">Old Town Exploration</div>
+          <div class="acard-desc">A maze of cobblestone streets and local boutiques, perfect for finding high-quality Provençal crafts.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── Apr 30: Cassis ───────────────────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-cassis">
+        <div class="day-eyebrow">Day 8</div>
+        <h2>Cassis &amp; The Calanques</h2>
+        <div class="day-header-date">April 30 · Thursday &nbsp;·&nbsp; Aix → Cassis (50 km)</div>
+      </div>
+      <div class="activities-grid">
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://en.destinationlaciotat.com/explore/the-calanques-national-park/route-des-cretes/" target="_blank" rel="noopener">Route des Crêtes</a></div>
+          <div class="acard-desc">A winding cliff-top road (D141) linking Cassis to La Ciotat, offering spectacular viewpoints over the Mediterranean.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-route fa-fw"></i><span>Access directly from Cassis; look for the "Sémaphore" viewpoint for the highest vista.</span></div>
+          </div>
+        </div>
+
+        <div class="acard">
+          <div class="acard-name"><a href="https://www.calanques-parcnational.fr/en/port-pin" target="_blank" rel="noopener">Calanque Port Miou &amp; Port Pin</a></div>
+          <div class="acard-desc">An easy coastal stroll leading to limestone "fjords" with turquoise waters — the iconic Calanques experience.</div>
+          <div class="acard-meta">
+            <div class="acard-meta-row"><i class="fas fa-location-dot fa-fw"></i><span>Park on Avenue Notre-Dame along Port-Miou; follow the path ~45 min to reach Port Pin.</span></div>
+            <div class="acard-meta-row"><i class="fas fa-clock fa-fw"></i><span>National Park open 24/7 · Check for fire-hazard closures in hot/windy weather.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ─── May 1: Departure ─────────────────────────────── -->
+    <div class="day-section">
+      <div class="day-header d-departure">
+        <div class="day-eyebrow">Day 9 · Final</div>
+        <h2>Early Departure</h2>
+        <div class="day-header-date">May 1 · Friday &nbsp;·&nbsp; Cassis → Marseille Airport (55 km)</div>
+      </div>
+      <div class="departure-box">
+        <div class="dep-item">
+          <h3><i class="fas fa-road" style="margin-right:0.5rem;"></i>Drive to Airport</h3>
+          <p>Leave Cassis at <strong>07:00 AM sharp</strong>.</p>
+          <p>55 km — approximately 45 minutes.</p>
+          <p>Arrive Marseille Airport (MRS) by <strong>07:45 AM</strong> for check-in.</p>
+          <div class="dep-alert"><i class="fas fa-triangle-exclamation"></i> Do not leave later than 07:00 AM</div>
+        </div>
+        <div class="dep-item">
+          <h3><i class="fas fa-plane-departure" style="margin-right:0.5rem;"></i>Return Flight</h3>
+          <p>El Al Flight <strong>LY 324</strong></p>
+          <p>Marseille (MRS) → Tel Aviv</p>
+          <p>Departs at <strong>10:00 AM</strong></p>
+          <p style="margin-top:0.5rem; opacity:0.65; font-size:0.8rem;">Drop off the Avis SUV at Marseille Airport before check-in.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /days-container -->
+</div><!-- /#highlights -->
+
+<!-- ═══════════════════════════ FOOTER ════════════════════════════ -->
+<footer>
+  <h3>Bon Voyage ✦</h3>
+  <p style="margin-top:0.3rem; color:rgba(255,255,255,0.5);">Provence &amp; The Riviera · April 23 – May 1, 2026</p>
+  <p class="footer-route">Nice &nbsp;·&nbsp; Moustiers &nbsp;·&nbsp; St. Rémy &nbsp;·&nbsp; Montpellier &nbsp;·&nbsp; Arles &nbsp;·&nbsp; Aix &nbsp;·&nbsp; Cassis &nbsp;·&nbsp; Marseille</p>
+  <p style="margin-top:1.5rem;"><a href="https://maps.app.goo.gl/CKPtgWmorKTqkYvLA" target="_blank" rel="noopener"><i class="fas fa-map-marked-alt"></i>&nbsp; View Full Route Map</a></p>
+</footer>
+
+</body>
+</html>
