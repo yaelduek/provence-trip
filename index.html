@@ -272,6 +272,7 @@
     .note-box i { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
 
     /* ─── Overview Table ─────────────────────────────────────────── */
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .table-wrap {
       background: white;
       border-radius: 20px;
@@ -566,6 +567,7 @@
   <span class="title-rule"></span>
 
   <div class="table-wrap">
+    <div class="table-scroll">
     <table>
       <thead>
         <tr>
@@ -652,6 +654,7 @@
         </tr>
       </tbody>
     </table>
+    </div><!-- /table-scroll -->
   </div>
 </section>
 
